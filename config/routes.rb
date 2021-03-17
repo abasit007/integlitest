@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'products', to: 'products#index'
+  get 'products/new', to: 'products#new'
+  get 'products/show/:id', to: 'products#show'
+  post 'products/create'
+  post 'products/add_to_cart', to: 'products#add_to_cart'
+  post '/checkout', to: 'products#checkout'
+  get 'cart', to: 'products#cart'
   resources :users, only: [:new, :create]
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

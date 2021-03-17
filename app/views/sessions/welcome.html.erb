@@ -1,11 +1,14 @@
-<h1>Welcome</h1>
+<h1 class="h1">Welcome</h1>
+<div class="row">
+    <%if logged_in?%>
+        <h1>You are Logged In, <%= current_user.username %></h1>
+    <%end%>
+</div>
+<div class="row form-group">
+    <%= button_to "Sign In", '/login', method: :get, class: "btn btn-success"%>
+</div>
 
-<%if logged_in?%>
-    <h1>You are Logged In, <%= current_user.username %></h1>
-<%end%>
-
-<%= button_to "Sign In", '/login', method: :get%>
-
-<%= button_to "Login", '/users/new', method: :get%>
-
+<div class="row form-group">
+    <%= button_to "Sign Up", '/users/new', method: :get, class: "btn btn-info"%>
+</div>
 

@@ -1,0 +1,6 @@
+<div class="row">
+    <h1>Products Listing</h1>
+    <h3 class="cart"><%= link_to "Cart", cart_path%><%= image_tag 'download'%><p class="cart-total"><%= session[:cart].length%></p></h3>
+
+</div>
+<%= react_component("Products", { products: @products }) %>

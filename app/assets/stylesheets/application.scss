@@ -1,0 +1,28 @@
+@import 'bootstrap/scss/bootstrap';
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: grey;
+}
+
+.product {
+    margin-top: 2%;
+}
+.cart {
+    margin-left: 2%;
+    display: inline-flex;
+    a {
+        color: wheat;
+        text-decoration: none;
+    }
+    img {
+        width: 30px;
+    }
+    p {
+        background-color: red;
+        color: balck;
+        border-radius: 50%;
+        height: min-content;
+    }
+}
